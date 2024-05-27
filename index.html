@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <title>Dom JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h3>Pendaftaran Peminatan</h3>
+        </div>
+        <form id="peminatanForm">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" placeholder="Nama anda" required>
+            
+            <label for="nim">NIM</label>
+            <input type="text" id="nim" placeholder="NIM anda" required>
+
+            <p>Peminatan pada bidang:</p>
+            <div class="radio-group">
+                <input type="radio" name="peminatan" id="programing" value="programing" required>
+                <label for="programing">Programing</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" name="peminatan" id="desain" value="desain" required>
+                <label for="desain">Desain</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" name="peminatan" id="jaringan" value="jaringan" required>
+                <label for="jaringan">Jaringan</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" name="peminatan" id="data" value="data" required>
+                <label for="data">Data</label>
+            </div>
+
+            <label for="angkatan">Angkatan</label>
+            <select id="angkatan" required>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+            </select>
+
+            <label for="tanggal">Tanggal</label>
+            <input type="text" id="tanggal" readonly required>
+
+            <label for="alamat">Alamat</label>
+            <textarea id="alamat" placeholder="Tulis alamat mu disini" rows="3" required></textarea>
+
+            <button type="button" onclick="kirimdata()">Kirim</button>
+        </form>
+    </div>
+    <div id="customAlert" class="custom-alert">
+        <span id="alertMessage"></span>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+</body>
+</html>
